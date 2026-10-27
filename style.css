@@ -1,0 +1,108 @@
+:root {
+    --navy: #0b1f3a;
+    --navy-mid: #123056;
+    --blue: #1e4d8c;
+    --blue-soft: #2b6cb0;
+    --gold: #c9a227;
+    --gold-bright: #e0c15a;
+    --gold-deep: #9a7b1a;
+    --white: #ffffff;
+    --ivory: #f7f4ea;
+    --text: #12233d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Calibri, "Trebuchet MS", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, rgba(201, 162, 39, 0.18), transparent 32%),
+        linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 48%, #0a1830 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    margin: 0 0 28px;
+    color: var(--white);
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 12px;
+}
+
+#quiz {
+    width: min(640px, 100%);
+    background: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 16px;
+    padding: 32px 28px 28px;
+    box-shadow:
+        0 0 0 6px rgba(201, 162, 39, 0.12),
+        0 18px 40px rgba(8, 20, 40, 0.35);
+}
+
+#question {
+    margin: 0 0 22px;
+    color: var(--navy);
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#options button {
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    background: var(--ivory);
+    color: var(--navy);
+    border: 1px solid #d8c88a;
+    border-left: 4px solid var(--blue);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    line-height: 1.35;
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+#options button:hover,
+#options button:focus-visible {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--gold);
+    border-left-color: var(--gold-bright);
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(18, 48, 86, 0.22);
+}
+
+#options button:active {
+    transform: translateY(0);
+}
+
+#result {
+    width: min(640px, 100%);
+    margin: 22px 0 0;
+    min-height: 1.5em;
+    text-align: center;
+    color: var(--gold-bright);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
